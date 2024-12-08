@@ -176,6 +176,7 @@ function History({ userSettings }: { userSettings: UserSettings }) {
   );
 }
 
+// eslint-disable-next-line
 function CustomTooltip({ active, payload, formatter }: any) {
   if (!active || !payload || payload.length === 0) return null;
 
@@ -224,7 +225,7 @@ function TooltipRow({
 }) {
   const formattingFn = useCallback(
     (value: number) => formatter.format(value),
-    [value]
+    [formatter]
   );
 
   return (

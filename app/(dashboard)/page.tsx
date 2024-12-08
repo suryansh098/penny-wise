@@ -30,7 +30,7 @@ async function page() {
           <div>
             <h2 className="text-3xl font-bold">Hello, {user.firstName}! 👋</h2>
             <p className="text-muted-foreground">
-              Let's start tracking your monthly incomes and expenses
+              Let&apos;s start tracking your monthly incomes and expenses
             </p>
           </div>
 

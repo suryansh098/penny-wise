@@ -20,8 +20,8 @@ export async function CreateTransaction(form: CreateTransactionSchemaType) {
     redirect("/sign-in");
   }
 
-  let { amount, category, date, description, type } = parsedBody.data;
-  date = DateToUTCDate(date);
+  const { amount, category, description, type } = parsedBody.data;
+  const date = DateToUTCDate(parsedBody.data.date);
 
   const categoryRow = await prisma.category.findFirst({
     where: {
